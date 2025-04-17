@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "build": "^0.1.4"
+  },
+  "name": "votecom",
+  "description": "A Polling Website | Created with HTML,CSS &amp; JS Helps to create a poll on a local machine, cast votes and view results. Software version: <https://github.com/andrew-geeks/tkinter-voting-system>",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrew-geeks/vote.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrew-geeks/vote.com/issues"
+  },
+  "homepage": "https://github.com/andrew-geeks/vote.com#readme"
+}
