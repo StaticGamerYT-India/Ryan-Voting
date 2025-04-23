@@ -281,6 +281,8 @@ body {
 
   #footer {
     padding: 0.75rem;
+  position: static;
+  bottom: auto;
   }
 
   #footer p {
