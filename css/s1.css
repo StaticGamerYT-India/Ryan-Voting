@@ -220,8 +220,17 @@ body {
 /* Consolidated Media Query */
 @media (max-width: 768px) {
   body {
-    padding-bottom: 100px; /* Increased padding for smaller screens if footer content wraps */
+    padding-bottom: 130px; /* Extra padding for small screens */
   }
+
+  #footer {
+    padding: 0.75rem; /* Adjust padding for smaller screens */
+  }
+
+  #footer p {
+    font-size: 0.8rem; /* Smaller font size for mobile */
+  }
+}
 
   .voting-card {
     margin: 1rem;
@@ -275,23 +284,31 @@ body {
 }
 
 body {
-    overflow-y: auto;
-  padding-bottom: 80px; /* Adjust based on footer height */
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, #00F260 0%, #0575E6 50%, #44ff00 100%);
+  animation: gradientAnimation 15s ease infinite;
+  background-size: 400% 400%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding-bottom: 120px; /* Adjust this based on footer height */
 }
 
 
 #footer {
-  background: rgba(26, 26, 26, 0.98); /* Slightly increased opacity */
-  padding: 1rem;
-  text-align: center;
-  position: static; /* Changed from fixed to static */
+  background: rgba(26, 26, 26, 0.98); /* Footer background */
+  padding: 1rem; /* Space inside the footer */
+  text-align: center; /* Center-align content */
+  position: static; /* Ensure footer scrolls with the page */
   bottom: auto; /* Reset bottom property */
   left: 0;
   right: 0;
-  width: 100%;
-  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+  width: 100%; /* Full width */
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.15); /* Optional shadow for aesthetics */
 }
-  #footer p {
-    font-size: 0.8rem;
-  }
+
+#footer p {
+  color: #e0e0e0; /* Text color */
+  margin: 0; /* Remove extra spacing */
+  font-size: 0.9rem; /* Adjust font size */
 }
