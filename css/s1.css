@@ -98,20 +98,16 @@ body {
 }
 
 .candidate-card {
-  background: rgba(255, 255, 255, 0.98);
-  border-radius: 15px; /* Adjusted radius */
-  padding: clamp(1.5rem, 3vw, 2rem); /* Adjusted padding */
+  background: rgba(255, 255, 255, 0.98); /* Card background */
+  border-radius: 15px; /* Rounded corners */
+  padding: 1rem; /* Padding inside the card */
   text-align: center;
-  transition: all 0.3s ease;
-  height: 100%; /* Ensure cards have equal height */
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1); /* Adjusted shadow */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Push content apart */
-  gap: 1.5rem; /* Adjusted gap */
-  border: 1px solid rgba(0, 0, 0, 0.08); /* Subtler border */
+  transition: all 0.3s ease; /* Smooth transitions */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: inline-block; /* Ensure the card wraps naturally */
+  border: 1px solid rgba(0, 0, 0, 0.08); /* Subtle border */
+  width: auto; /* Automatically adjust width */
 }
-
 .candidate-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.15); /* Enhanced hover shadow */
