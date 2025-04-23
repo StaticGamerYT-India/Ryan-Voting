@@ -276,15 +276,21 @@ body {
 
 body {
     overflow-y: auto;
+  padding-bottom: 80px; /* Adjust based on footer height */
 }
 
 
-  #footer {
-    padding: 0.75rem;
-  position: static;
-  bottom: auto;
-  }
-
+#footer {
+  background: rgba(26, 26, 26, 0.98); /* Slightly increased opacity */
+  padding: 1rem;
+  text-align: center;
+  position: static; /* Changed from fixed to static */
+  bottom: auto; /* Reset bottom property */
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
   #footer p {
     font-size: 0.8rem;
   }
