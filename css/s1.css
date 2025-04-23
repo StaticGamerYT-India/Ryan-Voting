@@ -1,14 +1,14 @@
-/* Modern UI Styles */
-body {
+html, body {
+  height: 100%;
   margin: 0;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   background: linear-gradient(135deg, #00F260 0%, #0575E6 50%, #44ff00 100%);
   animation: gradientAnimation 15s ease infinite;
   background-size: 400% 400%;
-  min-height: 100vh;
   overflow-x: hidden;
-  /* Add padding-bottom to prevent footer overlap */
-  padding-bottom: 80px; /* Adjust based on footer height */
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 120px;
 }
 
 @keyframes gradientAnimation {
@@ -18,14 +18,13 @@ body {
 }
 
 .navbar {
-  /* Add some shadow for depth */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
   font-size: clamp(1.2rem, 4vw, 1.5rem);
   padding: 0.5rem;
-  font-weight: 600; /* Make brand slightly bolder */
+  font-weight: 600;
 }
 
 .navbar-nav .nav-link {
@@ -35,243 +34,68 @@ body {
 
 .navbar-nav .nav-link:hover {
   transform: translateY(-2px);
-  color: #00F260 !important; /* Keep hover color consistent */
+  color: #00F260 !important;
 }
 
 .main-content {
-  padding: clamp(1.5rem, 4vw, 3rem); /* Slightly adjusted padding */
-  /* Removed min-height, body already has min-height */
+  flex: 1;
+  padding: clamp(1.5rem, 4vw, 3rem);
   display: flex;
-  align-items: stretch; /* Align items to stretch vertically */
+  align-items: stretch;
   justify-content: center;
 }
 
 .voting-card {
-  background: rgba(255, 255, 255, 0.15); /* Slightly increased opacity */
-  backdrop-filter: blur(12px); /* Slightly increased blur */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
   border-radius: 20px;
-  padding: clamp(2rem, 5vw, 3rem); /* Adjusted padding */
+  padding: clamp(2rem, 5vw, 3rem);
   margin: 2rem auto;
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 1200px; /* Adjusted max-width for better large screen layout */
-  border: 1px solid rgba(255, 255, 255, 0.25); /* Slightly more visible border */
+  max-width: 1200px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .voting-card h1 {
-  color: white;
-  font-size: clamp(1.8rem, 5vw, 2.5rem); /* Responsive font size */
+  color: #fff;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
   font-weight: 700;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.15); /* Adjusted shadow */
-  text-align: center; /* Ensure heading is centered */
-  margin-bottom: 2.5rem; /* Ensure consistent bottom margin */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  margin-bottom: 2.5rem;
 }
 
 .form-label {
-  color: white;
-  font-size: clamp(1rem, 3vw, 1.2rem); /* Responsive font size */
+  color: #fff;
+  font-size: clamp(1rem, 3vw, 1.2rem);
   font-weight: 600;
-  margin-bottom: 0.8rem; /* Slightly reduced margin */
+  margin-bottom: 0.8rem;
 }
 
 .form-select {
-  background: rgba(255, 255, 255, 0.98); /* Slightly increased opacity */
+  background: rgba(255, 255, 255, 0.98);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 10px; /* Slightly reduced radius */
-  padding: 1rem 1.25rem; /* Adjusted padding */
-  font-size: clamp(1rem, 2.5vw, 1.1rem); /* Responsive font size */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Subtler shadow */
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   color: #1a1a1a;
   font-weight: 500;
-  margin-bottom: 2.5rem; /* Add margin below dropdown */
+  margin-bottom: 2.5rem;
 }
 
 .form-select:hover {
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12); /* Adjusted hover shadow */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
   transform: translateY(-2px);
 }
 
 .form-select:focus {
-  box-shadow: 0 0 0 3px rgba(5, 117, 230, 0.4); /* Changed focus color to blue */
-  border-color: rgba(5, 117, 230, 0.5); /* Added border color on focus */
+  box-shadow: 0 0 0 3px rgba(5, 117, 230, 0.4);
+  border-color: rgba(5, 117, 230, 0.5);
 }
 
-/* Candidate Card */
-.candidate-card {
-  background: rgba(255, 255, 255, 0.98); /* Card background */
-  border-radius: 15px; /* Rounded corners */
-  padding: 1rem; /* Padding inside the card */
-  text-align: center;
-  transition: all 0.3s ease; /* Smooth transitions */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  display: inline-block; /* Ensure the card wraps naturally */
-  border: 1px solid rgba(0, 0, 0, 0.08); /* Subtle border */
-  width: 100%; /* Automatically adjust width */
-  max-width: 300px; /* Limit width for consistency */
-  overflow: hidden; /* Prevent overflow of content */
-}
-
-
-/* Candidate Image Wrapper */
-.candidate-image-wrapper {
-  width: 100%; /* Full width of the card */
-  height: auto; /* Adjust height dynamically */
-  border-radius: 15px; /* Rounded corners */
-  overflow: hidden; /* Hide overflow */
-  margin-bottom: 1rem; /* Add spacing below the image */
-  display: block;
-  position: relative; /* For alignment */
-}
-
-/* Candidate Image */
-.candidate-image {
-  width: auto; /* Maintain natural width */
-  height: 100%; /* Let height dictate the size */
-  object-fit: contain; /* Show the entire image uncropped */
-  object-position: center; /* Center the image */
-}
-
-
-.candidate-card:hover .candidate-image {
-  transform: scale(1.03); /* Slight zoom on hover */
-  transition: transform 0.3s ease;
-}
-
-.candidate-card h3 {
-  color: #333;
-  font-weight: 600;
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem); /* Responsive font size */
-  margin-top: 0; /* Remove potential top margin if needed */
-  margin-bottom: 1rem; /* Add space below name */
-}
-
-.btn-vote {
-  /* New Button Style - Blue */
-  background-color: #0575E6; /* Primary blue from gradient */
-  color: white;
-  border: none; /* Removed border */
-  border-radius: 10px; /* Matched form/card radius */
-  padding: 0.9rem 1.8rem; /* Adjusted padding */
-  font-weight: 600;
-  font-size: clamp(0.9rem, 2vw, 1rem); /* Responsive font size */
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  width: auto;
-  min-width: 180px; /* Adjusted min-width */
-  margin: 0 auto; /* Center button horizontally */
-  display: inline-flex; /* Use inline-flex for centering */
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem; /* Slightly increased gap */
-  text-transform: none;
-  letter-spacing: 0.3px; /* Adjusted letter spacing */
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(5, 117, 230, 0.3); /* Shadow matching blue */
-  /* Ensure it's at the bottom */
-  margin-top: auto; /* Push button to bottom if card uses flex space-between */
-}
-
-.btn-vote:hover {
-  background-color: #045db8; /* Darker blue on hover */
-  color: white; /* Keep text white */
-  transform: translateY(-3px); /* Slightly more lift */
-  box-shadow: 0 7px 20px rgba(5, 117, 230, 0.4); /* Enhanced hover shadow */
-}
-
-.btn-vote:active {
-  transform: translateY(0px); /* Reset transform on active */
-  background-color: #034a94; /* Even darker blue on active */
-  box-shadow: 0 2px 10px rgba(5, 117, 230, 0.3); /* Reduced shadow on active */
-}
-
-.btn-vote i {
-  font-size: 1.1rem; /* Adjusted icon size */
-  transition: transform 0.3s ease;
-}
-
-##footer {
-  background: rgba(26, 26, 26, 0.98); /* Footer background */
-  padding: 1rem;
-  text-align: center;
-  width: 100%; /* Ensure the footer spans the full width */
-  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.15); /* Add a shadow for design */
-}
-html, body {
-  height: 100%; /* Ensure the page takes the full height of the screen */
-  margin: 0; /* Remove default margin */
-  display: flex;
-  flex-direction: column; /* Use flexbox to align content */
-}
-
-body {
-  padding: 0;
-}
-
-.main-content {
-  flex: 1; /* Make the content area expand to fill the space */
-}
-
-/* Consolidated footer styles */
-#footer em {
-  color: #00F260; /* Keep green highlight */
-  font-style: normal;
-  font-weight: 600;
-}
-
-#footer p {
-  color: #e0e0e0; /* Slightly lighter text color */
-  margin: 0;
-  font-size: 0.9rem;
-}
-
-/* Consolidated Media Query */
-@media (max-width: 768px) {
-  body {
-    padding-bottom: 130px; /* Extra padding for small screens */
-  }
-
-  #footer {
-    padding: 0.75rem; /* Adjust padding for smaller screens */
-  }
-
-  #footer p {
-    font-size: 0.8rem; /* Smaller font size for mobile */
-  }
-}
-
-  .voting-card {
-    margin: 1rem;
-    padding: 1.5rem; /* Reduced padding on smaller screens */
-  }
-
-  .voting-card h1 {
-    font-size: 1.8rem; /* Smaller heading on mobile */
-    margin-bottom: 2rem; /* Adjust margin */
-  }
-
-  .form-select {
-    margin-bottom: 2rem; /* Adjust margin */
-  }
-
-  .candidate-card {
-    margin-bottom: 1.5rem; /* Increased bottom margin between cards */
-  }
-
-  .candidate-image-wrapper {
-     max-width: 250px; /* Slightly smaller max image size on mobile */
-     margin-bottom: 0.8rem; /* Adjust margin */
-  }
-
-   .candidate-card h3 {
-     margin-bottom: 0.8rem; /* Adjust margin */
-   }
-
-  .btn-vote {
-    width: 100%; /* Make button full width */
-    padding: 1rem 1.5rem; /* Adjust padding */
-    min-width: auto; /* Remove min-width */
-  }css
 .candidate-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -281,42 +105,149 @@ body {
   margin: 0 auto;
 }
 
+.candidate-card {
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 15px;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.candidate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
 .candidate-image-wrapper {
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    aspect-ratio: 4 / 3;
-    width: 100%;
-    max-width: none;
-    margin: 0 auto 1rem auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  aspect-ratio: 4/3;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 1rem;
 }
 
-body {
-  margin: 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: linear-gradient(135deg, #00F260 0%, #0575E6 50%, #44ff00 100%);
-  animation: gradientAnimation 15s ease infinite;
-  background-size: 400% 400%;
-  min-height: 100vh;
-  overflow-x: hidden;
-  padding-bottom: 120px; /* Adjust this based on footer height */
+.candidate-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
 }
 
+.candidate-card:hover .candidate-image {
+  transform: scale(1.07);
+}
+
+.candidate-card h3 {
+  color: #333;
+  font-weight: 600;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  margin: 0 0 1rem;
+}
+
+.btn-vote {
+  background-color: #0575E6;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.9rem 1.8rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  text-transform: none;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 15px rgba(5, 117, 230, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  min-width: 180px;
+  margin: auto;
+  margin-top: auto;
+}
+
+.btn-vote:hover {
+  background-color: #045db8;
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(5, 117, 230, 0.4);
+}
+
+.btn-vote:active {
+  background-color: #034a94;
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(5, 117, 230, 0.3);
+}
+
+.btn-vote i {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
 
 #footer {
-  background: rgba(26, 26, 26, 0.98); /* Footer background */
-  padding: 1rem; /* Space inside the footer */
-  text-align: center; /* Center-align content */
-  position: static; /* Ensure footer scrolls with the page */
-  bottom: auto; /* Reset bottom property */
-  left: 0;
-  right: 0;
-  width: 100%; /* Full width */
-  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.15); /* Optional shadow for aesthetics */
+  background: rgba(26, 26, 26, 0.98);
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.15);
 }
 
 #footer p {
-  color: #e0e0e0; /* Text color */
-  margin: 0; /* Remove extra spacing */
-  font-size: 0.9rem; /* Adjust font size */
+  color: #e0e0e0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+#footer em {
+  color: #00F260;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@media (max-width: 768px) {
+  body, html {
+    padding-bottom: 130px;
+  }
+  #footer {
+    padding: 0.75rem;
+  }
+  #footer p {
+    font-size: 0.8rem;
+  }
+  .voting-card {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  .voting-card h1 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  .form-select {
+    margin-bottom: 2rem;
+  }
+  .candidate-card {
+    margin-bottom: 1.5rem;
+  }
+  .candidate-image-wrapper {
+    max-width: 250px;
+    margin-bottom: 0.8rem;
+  }
+  .candidate-card h3 {
+    margin-bottom: 0.8rem;
+  }
+  .btn-vote {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    min-width: auto;
+  }
 }
