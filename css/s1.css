@@ -107,37 +107,37 @@ body {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   display: inline-block; /* Ensure the card wraps naturally */
   border: 1px solid rgba(0, 0, 0, 0.08); /* Subtle border */
-  width: auto; /* Automatically adjust width */
-  max-width: 300px; /* Set a max width for consistency */
-  overflow: hidden; /* Ensure content doesn't overflow */
-  aspect-ratio: 3 / 4; /* Adjust the aspect ratio to fit portrait images */
+  width: 100%; /* Automatically adjust width */
+  max-width: 300px; /* Limit width for consistency */
+  overflow: hidden; /* Prevent overflow of content */
 }
 .candidate-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15); /* Enhanced hover shadow */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Enhanced hover shadow */
 }
 
 /* Candidate Image Wrapper */
 .candidate-image-wrapper {
-  width: 100%; /* Full width */
-  height: auto; /* Adjust to fit the image's aspect ratio */
+  width: 100%; /* Full width of the card */
+  aspect-ratio: 1 / 1; /* Maintain square aspect ratio */
   border-radius: 15px; /* Rounded corners */
-  overflow: hidden; /* Hide anything overflowing */
-  margin: 0 auto 1rem auto; /* Center the image */
-  display: block; /* Block layout for portrait images */
-  aspect-ratio: 3 / 4; /* Aspect ratio for portrait images */
+  overflow: hidden; /* Hide overflow */
+  margin-bottom: 1rem; /* Add spacing below the image */
+  display: block;
+  position: relative; /* For better alignment */
 }
-
 
 /* Candidate Image */
 .candidate-image {
-  width: 100%; /* Full width for responsiveness */
-  height: 100%; /* Ensure it fills the wrapper */
-  object-fit: cover; /* Fill the space while cropping */
-  object-position: center; /* Keep the image centered */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  object-fit: cover; /* Crop image to fill square shape */
+  object-position: center; /* Center the image */
 }
+
 .candidate-card:hover .candidate-image {
-  transform: scale(1.07); /* Slightly increased scale */
+  transform: scale(1.05); /* Slight zoom on hover */
+  transition: transform 0.3s ease;
 }
 
 .candidate-card h3 {
