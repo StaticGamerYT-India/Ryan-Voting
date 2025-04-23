@@ -111,32 +111,30 @@ body {
   max-width: 300px; /* Limit width for consistency */
   overflow: hidden; /* Prevent overflow of content */
 }
-.candidate-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Enhanced hover shadow */
-}
+
 
 /* Candidate Image Wrapper */
 .candidate-image-wrapper {
   width: 100%; /* Full width of the card */
-  aspect-ratio: 1 / 1; /* Maintain square aspect ratio */
+  height: auto; /* Adjust height dynamically */
   border-radius: 15px; /* Rounded corners */
   overflow: hidden; /* Hide overflow */
   margin-bottom: 1rem; /* Add spacing below the image */
   display: block;
-  position: relative; /* For better alignment */
+  position: relative; /* For alignment */
 }
 
 /* Candidate Image */
 .candidate-image {
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  object-fit: cover; /* Crop image to fill square shape */
+  width: auto; /* Maintain natural width */
+  height: 100%; /* Let height dictate the size */
+  object-fit: contain; /* Show the entire image uncropped */
   object-position: center; /* Center the image */
 }
 
+
 .candidate-card:hover .candidate-image {
-  transform: scale(1.05); /* Slight zoom on hover */
+  transform: scale(1.03); /* Slight zoom on hover */
   transition: transform 0.3s ease;
 }
 
