@@ -121,17 +121,18 @@ body {
   border-radius: 10px; /* Keep the rounded corners */
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Optional shadow */
-  width: 100%; /* Use full width of the container */
-  max-width: 300px; /* Adjust max width to fit portrait images better */
+  width: 100%; /* Full width of the container */
+  max-width: 300px; /* Control the max width */
   margin: 0 auto 1rem auto; /* Center the image */
 }
-.candidate-image {
-  width: 100%;
-  height: auto; /* Maintain aspect ratio */
-  object-fit: contain; /* Ensure the entire image is visible without cropping */
-  object-position: center; /* Center the image in the container */
-}
 
+.candidate-image {
+  width: auto; /* Let the width adjust automatically */
+  height: auto; /* Let the height adjust automatically */
+  max-height: 100%; /* Limit the height to fit in the container */
+  object-fit: contain; /* Ensure the entire image is visible without cropping */
+  object-position: center; /* Center the image within the container */
+}
 .candidate-card:hover .candidate-image {
   transform: scale(1.07); /* Slightly increased scale */
 }
