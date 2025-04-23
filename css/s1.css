@@ -191,17 +191,26 @@ body {
   transition: transform 0.3s ease;
 }
 
-#footer {
-  background: rgba(26, 26, 26, 0.98); /* Slightly increased opacity */
+##footer {
+  background: rgba(26, 26, 26, 0.98); /* Footer background */
   padding: 1rem;
   text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 100;
-  box-shadow: 0 -5px 15px rgba(0,0,0,0.15); /* Enhanced shadow */
+  width: 100%; /* Ensure the footer spans the full width */
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.15); /* Add a shadow for design */
+}
+html, body {
+  height: 100%; /* Ensure the page takes the full height of the screen */
+  margin: 0; /* Remove default margin */
+  display: flex;
+  flex-direction: column; /* Use flexbox to align content */
+}
+
+body {
+  padding: 0;
+}
+
+.main-content {
+  flex: 1; /* Make the content area expand to fill the space */
 }
 
 /* Consolidated footer styles */
