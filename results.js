@@ -89,7 +89,7 @@ $(document).ready(function() {
       // Clear all voting data from localStorage
       for (let i = localStorage.length - 1; i >= 0; i--) {
         const key = localStorage.key(i);
-        if (key && (key.includes('votes') || key.includes('_c1') || key.includes('_c2') || key.includes('_voted'))) {
+        if (key && (key.includes('votes') || key.includes('_c1') || key.includes('_c2'))) {
           localStorage.removeItem(key);
         }
       }
@@ -211,6 +211,8 @@ $(document).ready(function() {
   // Button event listeners
   $("#resetBtn").click(resetAllResults);
   $("#exportBtn").click(exportResults);
+  $("#backupBtn").click(backupAllData);
+  $("#importBtn").click(importData);
   $("#backupBtn").click(backupAllData);
   $("#importBtn").click(importData);
 });
