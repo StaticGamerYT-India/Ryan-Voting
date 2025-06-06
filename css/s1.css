@@ -206,6 +206,128 @@ html, body {
   font-size: 0.9rem;
 }
 
+/* Results Page Styles */
+.poll-name-res {
+  color: #fff;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.vote-count-wrapper {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.vote-count {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: #0575E6;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+
+/* Table Styles */
+.styled-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1.5rem 0;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table thead {
+  background-color: #0575E6;
+}
+
+.styled-table thead tr {
+  color: #ffffff;
+  text-align: left;
+  font-weight: 600;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 1rem 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.styled-table tbody tr {
+  transition: all 0.2s ease;
+}
+
+.styled-table tbody tr:hover {
+  background-color: rgba(5, 117, 230, 0.05);
+  transform: translateY(-2px);
+}
+
+.styled-table tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #0575E6;
+}
+
+/* Action Buttons for Results Page */
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.action-buttons .btn {
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  min-width: 180px;
+}
+
+.action-buttons .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Settings Page Styles */
+.settings-form input[type="text"] {
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.settings-form input[type="text"]:focus {
+  box-shadow: 0 0 0 3px rgba(5, 117, 230, 0.4);
+  border-color: rgba(5, 117, 230, 0.5);
+  outline: none;
+}
+
+.save-btn {
+  background-color: #00F260 !important;
+  box-shadow: 0 4px 15px rgba(0, 242, 96, 0.3) !important;
+}
+
+.save-btn:hover {
+  background-color: #00d455 !important;
+  box-shadow: 0 7px 20px rgba(0, 242, 96, 0.4) !important;
+}
+
 @media (max-width: 768px) {
   .voting-card {
     width: 95%;
