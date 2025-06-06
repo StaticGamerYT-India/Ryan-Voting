@@ -33,47 +33,48 @@
 
     <div class="container main-content py-5">
       <div class="voting-card">
-        <h1 class="text-center mb-5">
+        <h1 class="text-center mb-3">
           <i class="fas fa-vote-yea me-3"></i>Cast Your Vote<i class="fas fa-vote-yea ms-3"></i>
         </h1>
+        <h2 class="poll-name text-center mb-5">Ryan Council Elections</h2>
 
         <div class="form-group mb-5">
           <label for="class-select" class="form-label">Select Your Class</label>
           <select id="class-select" class="form-select">
-            <option value=""> Select Your Class</option>
-                          <option value="class1">TEACHER</option>
+            <option value="">Select Your Class</option>
+            <option value="teacher">TEACHER</option>
             <optgroup label="ICSE">
-              <option value="class1">5-A ICSE</option>
-              <option value="class1">5-B ICSE</option>
-              <option value="class2">6-A ICSE</option>
-              <option value="class4">7-A ICSE</option>
-              <option value="class5">7-B ICSE</option>
-              <option value="class6">8-A ICSE</option>
-              <option value="class1">8-B ICSE</option>
-              <option value="class7">9-A ICSE</option>
-              <option value="class9">10-A ICSE</option>
-              <option value="class11">11-A ISC Science</option>
-              <option value="class12">11-B ISC Commerce</option>
-              <option value="class11">12-A ISC Science</option>
-              <option value="class11">12-B ISC Commerce</option>
+              <option value="5a-icse">5-A ICSE</option>
+              <option value="5b-icse">5-B ICSE</option>
+              <option value="6a-icse">6-A ICSE</option>
+              <option value="7a-icse">7-A ICSE</option>
+              <option value="7b-icse">7-B ICSE</option>
+              <option value="8a-icse">8-A ICSE</option>
+              <option value="8b-icse">8-B ICSE</option>
+              <option value="9a-icse">9-A ICSE</option>
+              <option value="10a-icse">10-A ICSE</option>
+              <option value="11a-isc-science">11-A ISC Science</option>
+              <option value="11b-isc-commerce">11-B ISC Commerce</option>
+              <option value="12a-isc-science">12-A ISC Science</option>
+              <option value="12b-isc-commerce">12-B ISC Commerce</option>
             </optgroup>
             <optgroup label="CBSE">
-              <option value="class1">5-A CBSE</option>
-              <option value="class2">5-B CBSE</option>
-              <option value="class3">6-A CBSE</option>
-              <option value="class4">6-B CBSE</option>
-              <option value="class5">7-A CBSE</option>
-              <option value="class6">7-B CBSE</option>
-              <option value="class7">8-A CBSE</option>
-              <option value="class8">8-B CBSE</option>
-              <option value="class9">9-A CBSE</option>
-              <option value="class10">9-B CBSE</option>
-              <option value="class11">10-A CBSE</option>
-              <option value="class12">10-B CBSE</option>
-              <option value="class13">11-A CBSE</option>
-              <option value="class14">11-B CBSE</option>
-              <option value="class15">12-A CBSE</option>
-              <option value="class16">12-B CBSE</option>
+              <option value="5a-cbse">5-A CBSE</option>
+              <option value="5b-cbse">5-B CBSE</option>
+              <option value="6a-cbse">6-A CBSE</option>
+              <option value="6b-cbse">6-B CBSE</option>
+              <option value="7a-cbse">7-A CBSE</option>
+              <option value="7b-cbse">7-B CBSE</option>
+              <option value="8a-cbse">8-A CBSE</option>
+              <option value="8b-cbse">8-B CBSE</option>
+              <option value="9a-cbse">9-A CBSE</option>
+              <option value="9b-cbse">9-B CBSE</option>
+              <option value="10a-cbse">10-A CBSE</option>
+              <option value="10b-cbse">10-B CBSE</option>
+              <option value="11a-cbse">11-A CBSE</option>
+              <option value="11b-cbse">11-B CBSE</option>
+              <option value="12a-cbse">12-A CBSE</option>
+              <option value="12b-cbse">12-B CBSE</option>
             </optgroup>
           </select>
         </div>
@@ -82,7 +83,7 @@
           <div class="col-md-6">
             <div class="candidate-card">
               <div class="candidate-image-wrapper">
-                <img src="images/WhatsApp Image 2023-06-11 at 09.07.28 (1).jpeg" class="candidate-image">
+                <img src="images/WhatsApp Image 2023-06-11 at 09.07.28 (1).jpeg" class="candidate-image" alt="Candidate 1">
               </div>
               <h3 id="cn-1" class="mb-4">Candidate 1</h3>
               <button type="button" class="btn btn-1 btn-vote">
@@ -93,7 +94,7 @@
           <div class="col-md-6">
             <div class="candidate-card">
               <div class="candidate-image-wrapper">
-                <img src="images/WhatsApp Image 2023-06-11 at 09.07.28.jpeg" class="candidate-image">
+                <img src="images/WhatsApp Image 2023-06-11 at 09.07.28.jpeg" class="candidate-image" alt="Candidate 2">
               </div>
               <h3 id="cn-2" class="mb-4">Candidate 2</h3>
               <button type="button" class="btn btn-2 btn-vote">
@@ -107,14 +108,14 @@
   </section>
 
   <section id="footer">
-    <div class="container">
+    <div class="container text-center py-4">
       <em>Created by Smeet</em>
       <p class="mt-2">Ryan International School Dumas <i class="fas fa-vote-yea"></i> Batch of 2023</p>
     </div>
   </section>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="index.js"></script>
 </body>
 </html>
